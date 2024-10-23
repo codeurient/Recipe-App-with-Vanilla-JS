@@ -241,7 +241,7 @@ body {
 
 main { flex-grow: 1; }
 
-:focus-visible { outline-color: var(--primary); }
+:focus-visible { outline-color: var(--primary); }   /* :focus-visible psevdosinfi, yalnız klaviatura və ya istifadəçi köməkçi texnologiyaları vasitəsilə fokuslanmış elementlərdə tətbiq olunan stil qaydalarını təyin etmək üçün istifadə olunur. */
 
 /*-----------------------------------*\
   #TYPOGRAPHY
