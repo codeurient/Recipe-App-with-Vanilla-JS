@@ -1,6 +1,6 @@
 /**
  * @license MIT
- * @copyright 2023 
+ * @copyright 2024 
  * @author 
  */
 
