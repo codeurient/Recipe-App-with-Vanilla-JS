@@ -50,7 +50,7 @@ Light colors
 --light-alpha-20: hsla(0, 0%, 0%, 0.2);
 ```
 
-Light colors
+Dark colors
 
 ``` css
 --dark-background: hsl(0, 0%, 10%);
