@@ -128,24 +128,44 @@
 [data-theme="light"] {
   color-scheme: light;
 
-  --light-background: hsl(0, 0%, 96%);
-  --light-on-background: hsl(0, 3%, 13%);
-  --light-on-background-variant: hsl(20, 3%, 19%);
-  --light-primary: hsl(11, 87%, 59%);
-  --light-primary-hover: hsl(11, 60%, 50%);
-  --light-primary-container: hsl(14, 57%, 95%);
-  --light-error: hsl(1, 73%, 42%);
-  --light-active-indicator: hsl(12, 58%, 88%);
-  --light-image-background: hsl(0, 0%, 70%);
-  --light-badge-btn: hsl(30, 58%, 88%);
-  --light-on-badge-btn: hsl(24, 7%, 14%);
-  --light-outline: hsl(10, 19%, 88%);
-  --light-input-outline: hsl(7, 7%, 73%);
-  --light-input-outline-hover: hsl(9, 3%, 52%);
-  --light-alpha-10: hsla(0, 0%, 0%, 0.1);
-  --light-alpha-20: hsla(0, 0%, 0%, 0.2);
+  --background: var(--light-background);                             
+  --on-background: var(--light-on-background);                          
+  --on-background-variant: var(--light-on-background-variant);                  
+  --primary: var(--light-primary);                                
+  --primary-hover: var(--light-primary-hover);                          
+  --primary-container: var(--light-primary-container);                      
+  --error: var(--light-error);                                  
+  --active-indicator: var(--light-active-indicator);                       
+  --image-background: var(--light-image-background);                       
+  --badge-btn: var(--light-badge-btn);                              
+  --on-badge-btn: var(--light-on-badge-btn);                           
+  --outline: var(--light-outline);                                
+  --input-outline: var(--light-input-outline);                          
+  --input-outline-hover: var(--light-input-outline-hover);                    
+  --alpha-10: var(--light-alpha-10);                               
+  --alpha-20: var(--light-alpha-20);                               
 }
 
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --background: var(--dark-background);                             
+  --on-background: var(--dark-on-background);                          
+  --on-background-variant: var(--dark-on-background-variant);                  
+  --primary: var(--dark-primary);                                
+  --primary-hover: var(--dark-primary-hover);                          
+  --primary-container: var(--dark-primary-container);                      
+  --error: var(--dark-error);                                  
+  --active-indicator: var(--dark-active-indicator);                       
+  --image-background: var(--dark-image-background);                       
+  --badge-btn: var(--dark-badge-btn);                              
+  --on-badge-btn: var(--dark-on-badge-btn);                           
+  --outline: var(--dark-outline);                                
+  --input-outline: var(--dark-input-outline);                          
+  --input-outline-hover: var(--dark-input-outline-hover);                    
+  --alpha-10: var(--dark-alpha-10);                               
+  --alpha-20: var(--dark-alpha-20);                               
+}
 
 
 
