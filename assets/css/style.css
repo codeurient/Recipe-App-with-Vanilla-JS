@@ -521,8 +521,6 @@ main { flex-grow: 1; }
   text-align: center;
 }
 
-.mobile-nav .nav-link[aria-current="true"] { color: var(--on-background); }
-
 .mobile-nav .item-icon {
   width: 64px;
   height: 32px;
@@ -534,6 +532,19 @@ main { flex-grow: 1; }
   transition: var(--transition-short);
 }
 
+.mobile-nav .nav-link:where(:hover, :focus-visible) .item-icon{
+  background-color: var(--alpha-10);
+}
+
+.mobile-nav .nav-link[aria-current="true"] { color: var(--on-background); }
+
+.mobile-nav .nav-link[aria-current="true"] .item-icon {
+  background-color: var(--active-indicator);
+}
+
+.mobile-nav .nav-link[aria-current="true"] .material-symbols-outlined {
+  font-variation-settings: "FILL" 1;
+}
 
 /*-----------------------------------*\
   #HERO
