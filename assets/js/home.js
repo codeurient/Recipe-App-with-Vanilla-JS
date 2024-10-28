@@ -20,3 +20,14 @@ $searchBtn.addEventListener("click", function() {
 $searchField.addEventListener("keydown", e => {
     if ( e.key === "Enter" ) $searchBtn.click();
 });
+
+
+
+const $tabBtns = document.querySelectorAll("[data-tab-btn]");
+const $tabPanels = document.querySelectorAll("[data-tab-panel]");
+
+
+let [$lastActiveTabPanel] = $tabPanels;
+let [$lastActiveTabBtn] = $tabBtns;
+
+
