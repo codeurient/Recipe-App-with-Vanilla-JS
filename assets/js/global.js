@@ -19,3 +19,23 @@ window.addEventOnElements = function($elements, eventType, callback) {
         $element.addEventListener(eventType, callback);
     }
 }
+
+
+export const /** {Array} */ cardQueries = [
+    ["fields", "uri"],
+    ["fields", "label"],
+    ["fields", "image"],
+    ["fields", "totalTime"],
+];
+
+export const /** {String} */ $skeletonCard = `
+    <div class="card skeleton-card">
+        <div class="skeleton card-banner"></div>
+
+        <div class="card-body">
+            <div class="skeleton card-title"></div>
+
+            <div class="skeleton card-text"></div>
+        </div>
+    </div>
+`;
