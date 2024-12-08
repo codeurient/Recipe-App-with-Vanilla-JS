@@ -6,6 +6,18 @@
 
 "use strict";
 
+
+/**
+ * Import
+ */
+
+
+import { fetchData } from "./api.js";
+
+
+/**
+ * Home Page Search
+ */
 const $searchField = document.querySelector("[data-search-field]");
 const $searchBtn = document.querySelector("[data-search-btn]");
 

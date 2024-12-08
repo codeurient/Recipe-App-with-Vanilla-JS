@@ -25,6 +25,9 @@ export const fetchData = async function(queries, successCallback) {
 
     const /** {String} */ url = `${ACCESS_POINT}?app_id=${API_ID}&app_key=${API_KEY}&type=${TYPE}${query ? `&${query}` : ""}`;
 
+    console.log(url);
+    
+
 
     const /** {Object} */ response = await fetch(url);
 
