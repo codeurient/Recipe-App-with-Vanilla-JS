@@ -13,6 +13,7 @@
 
 
 import { fetchData } from "./api.js";
+import { $skeletonCard, cardQueries } from "./global.js";
 
 
 /**
@@ -39,8 +40,8 @@ const $tabBtns = document.querySelectorAll("[data-tab-btn]");
 const $tabPanels = document.querySelectorAll("[data-tab-panel]");
 
 
-let [$lastActiveTabPanel] = $tabPanels;
-let [$lastActiveTabBtn] = $tabBtns;
+let /** {NodeElement} */ [$lastActiveTabPanel] = $tabPanels;
+let /** {NodeElement} */ [$lastActiveTabBtn] = $tabBtns;
 
 // TAB PANEL
 addEventOnElements($tabBtns, "click", function() {
@@ -55,6 +56,8 @@ addEventOnElements($tabBtns, "click", function() {
 
     $lastActiveTabPanel = $currentTabPanel;
     $lastActiveTabBtn = this;
+    addTabContent(this, $currentTabPanel);
+    
 });
 
 
@@ -79,3 +82,44 @@ addEventOnElements($tabBtns, "keydown", function(e) {
     }
 
 });
+
+
+
+/**
+ * Work with API
+ * fetch data for tab content
+ */
+const addTabContent = ($currentTabBtn, $currentTabPanel) => {
+    
+    const /** {NodeElement} */ $gridList = document.createElement("div");
+    $gridList.classList.add("grid-list");
+
+    $currentTabPanel.innerHTML = `
+        <div class="grid-list">
+            ${$skeletonCard.repeat(12)}
+        </div>
+    `;
+
+    fetchData([['mealType', $currentTabBtn.textContent.trim().toLowerCase()], ...cardQueries], function( data ) {
+        $currentTabPanel.innerHTML = "";
+
+        for (let i = 0; i < 12; i++) {
+            const {
+                recipe : {
+                    image,
+                    label: title,
+                    totalTime: cookingTime,
+                    uri
+                }
+            } = data.hits[i];
+
+            const /** {NodeElement} */ $card = document.createElement("div");
+            $card.classList.add("card");
+            $card.style.animationDelay  = `${100 * i}ms`;
+        }
+    });
+    
+}
+addTabContent($lastActiveTabBtn, $lastActiveTabPanel);
+
+
